@@ -25,64 +25,64 @@ Aplicación web (CRUD) construida con Laravel 12 para registrar, listar, editar 
 
 Clonar el repositorio:
 
-\`\`\`bash
+```bash
 git clone https://github.com/AndreaCaisa/inventario-equipos.git
 cd inventario-equipos
-\`\`\`
+```
 
 Instalar dependencias de PHP:
 
-\`\`\`bash
+```bash
 composer install
-\`\`\`
+```
 
 Configurar variables de entorno:
 
-\`\`\`bash
+```bash
 cp .env.example .env
 php artisan key:generate
-\`\`\`
+```
 
 Variables requeridas en `.env`:
 
-\`\`\`env
+```env
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=5432
 DB_DATABASE=inventario_equipos
 DB_USERNAME=postgres
 DB_PASSWORD=tu_password
-\`\`\`
+```
 
 Crear la base de datos en PostgreSQL:
 
-\`\`\`sql
+```sql
 CREATE DATABASE inventario_equipos;
-\`\`\`
+```
 
 Ejecutar las migraciones:
 
-\`\`\`bash
+```bash
 php artisan migrate
-\`\`\`
+```
 
 Levantar el servidor:
 
-\`\`\`bash
+```bash
 php artisan serve
-\`\`\`
+```
 
 Abrir en el navegador: `http://127.0.0.1:8000/equipos`
 
 ## Pruebas automatizadas
 
-\`\`\`bash
+```bash
 php artisan test
-\`\`\`
+```
 
 ## Estructura del proyecto
 
-\`\`\`
+```
 inventario-equipos/
 ├── app/
 │   ├── Models/
@@ -109,34 +109,26 @@ inventario-equipos/
 ├── .env.example                    Plantilla de variables de entorno
 ├── composer.json                   Dependencias de PHP
 └── artisan                         CLI de Laravel
-\`\`\`
+```
 
 ## Flujo de trabajo con Git
 
 Este repositorio usa la rama `main` protegida: ningún cambio se sube directo, todo pasa por Pull Request y debe pasar el workflow de pruebas automaticas antes de poder fusionarse.
 
-\`\`\`
+```
 main                              rama protegida, solo se actualiza por Pull Request
   feature/nombre-funcionalidad    para agregar algo nuevo
   fix/nombre-correccion           para corregir un error
   chore/nombre-tarea              tareas de mantenimiento (dependencias, CI, etc.)
-\`\`\`
+```
 
 Convencion de nombres de commits:
 
-\`\`\`
+```
 feat:     nueva funcionalidad
 fix:      correccion de error
 chore:    mantenimiento, dependencias, configuracion
 docs:     documentacion
 refactor: reorganizar codigo sin cambiar su comportamiento
 test:     pruebas
-\`\`\`
-
-Ejemplos:
-
-\`\`\`
-feat: agregar filtro de equipos por estado
-fix: corregir validacion del campo ubicacion
-docs: actualizar instrucciones de instalacion
-\`\`\`
+```

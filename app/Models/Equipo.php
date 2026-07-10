@@ -17,4 +17,7 @@ class Equipo extends Model
         'ubicacion',
         'urgente',
     ];
+    protected $casts = [
+    'urgente' => 'boolean',
+];
 }
