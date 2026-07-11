@@ -1,4 +1,4 @@
-﻿# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy PHP app to Azure Web App - aps-cenestur-inv-dep
@@ -56,9 +56,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.__clientidsecretname__ }}
-          tenant-id: ${{ secrets.__tenantidsecretname__ }}
-          subscription-id: ${{ secrets.__subscriptionidsecretname__ }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_14A0B68E448244769DE770500D26A3AF }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1BF0D4A5350A4E3786A74B02150AB802 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_DC6B153F25644608BE2D70AEC6F8EEFC }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
