@@ -12,8 +12,7 @@ env:
 
 jobs:
   build-and-deploy:
-    # Solo ejecutar si el push es a main O si la PR fue fusionada (merged)
-    if: github.event_name == 'push' || github.event.pull_request.merged == true
+    if: github.event_name =='push' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,8 +26,7 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
 
       - name: Desplegar a Azure App Service
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          clean: true
+          publish-profile: ${{secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
