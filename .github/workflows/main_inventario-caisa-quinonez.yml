@@ -3,12 +3,17 @@ name: Despliegue Laravel a Azure
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    types: [closed]
 
 env:
-  AZURE_WEBAPP_NAME: 'Inventario-Caisa-Quinonez' # Asegúrate que coincida exactamente con el nombre en Azure
+  AZURE_WEBAPP_NAME: 'Inventario-Caisa-Quinonez'
 
 jobs:
   build-and-deploy:
+    # Solo ejecutar si el push es a main O si la PR fue fusionada (merged)
+    if: github.event_name == 'push' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
