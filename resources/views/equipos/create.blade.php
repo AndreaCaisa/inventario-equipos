@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('titulo', 'Nuevo Equipooo')
+@section('titulo', 'Nuevo Equipo')
 
 @section('contenido')
     <h1 class="h3 mb-3">Registrar nuevo equipo</h1>
