@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('titulo', 'Listado de EQUIPOS')
+@section('titulo', 'Listado de Equipos :D ')
 
 @section('contenido')
     <div class="d-flex justify-content-between align-items-center mb-3">
