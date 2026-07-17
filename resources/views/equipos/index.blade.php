@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('titulo', 'Listado de Equiposss')
+@section('titulo', 'Listado de Equipos :D ')
 
 @section('contenido')
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1 class="h3">Listado de inventario</h1>
+        <h1 class="h3">Listado de Inventario A Y J </h1>
         <a href="{{ route('equipos.create') }}" class="btn btn-primary">+ Nuevo equipo</a>
     </div>
 
